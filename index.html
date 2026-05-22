@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbearia Kings Cut</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ───── NAVBAR ───── -->
+    <nav id="navbar">
+        <div class="nav-logo">Kings Cut</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#agendamento">Agendar</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+                <a href="https://wa.me/5511999999999" target="_blank" class="nav-cta">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </li>
+        </ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ───── HERO ───── -->
+    <!-- <section class="hero" id="home">
+        <div class="hero-fallback"></div> -->
+    <!--
+      VÍDEO DE FUNDO:
+      Descomente a tag <source> abaixo e coloque o caminho do seu vídeo real.
+      Enquanto não tiver vídeo, o fundo de foto aparece automaticamente.
+    -->
+    <!-- <video class="hero-video" autoplay muted loop playsinline
+            poster="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80">
+            <source src="video-barbearia.mp4" type="video/mp4" /> -->
+    <!-- </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">✦ Barbearia Premium ✦</div>
+            <h1 class="hero-title">KINGS <span>CUT</span></h1>
+            <p class="hero-subtitle">Corte, barba e estilo — executados com precisão e arte.</p>
+            <div class="hero-buttons">
+                <a href="#agendamento" class="btn-primary">
+                    <i class="far fa-calendar-alt"></i> Agendar Horário
+                </a>
+                <a href="#servicos" class="btn-secondary">Ver Serviços</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Anos de experiência</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4K+</div>
+                <div class="stat-label">Clientes atendidos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5★</div>
+                <div class="stat-label">Avaliação no Google</div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="hero" id="home">
+        <div class="hero-fallback"></div>
+
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./assets/video-barbearia.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✦ Barbearia Premium ✦</div>
+            <h1 class="hero-title">KINGS <span>CUT</span></h1>
+            <p class="hero-subtitle">Corte, barba e estilo — executados com precisão e arte.</p>
+            <div class="hero-buttons">
+                <a href="#agendamento" class="btn-primary">
+                    <i class="far fa-calendar-alt"></i> Agendar Horário
+                </a>
+                <a href="#servicos" class="btn-secondary">Ver Serviços</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Anos de experiência</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4K+</div>
+                <div class="stat-label">Clientes atendidos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5★</div>
+                <div class="stat-label">Avaliação no Google</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── SOBRE ───── -->
+    <section id="sobre">
+        <div class="sobre-grid">
+            <div class="sobre-img-wrapper">
+                <!--
+          Troque o background no CSS (.sobre-img) pela foto real da barbearia.
+          Ou use: <img src="foto-barbearia.jpg" class="sobre-img" alt="Barbearia" />
+        -->
+                <div class="sobre-img"></div>
+                <div class="sobre-img-badge">
+                    <strong>8</strong>
+                    <span>Anos de tradição</span>
+                </div>
+            </div>
+            <div class="sobre-text">
+                <p class="section-tag">✦ Nossa história</p>
+                <h2>ARTE E <span>TRADIÇÃO</span><br>EM CADA CORTE</h2>
+                <p>A Kings Cut nasceu da paixão pelo estilo masculino e pelo cuidado com cada detalhe. Fundada em 2016
+                    no coração da cidade, nossa barbearia une tradição e modernidade para entregar o melhor resultado a
+                    cada cliente.</p>
+                <p>Nossos profissionais são especializados e constantemente atualizados com as tendências mundiais,
+                    garantindo técnica impecável seja no degradê mais preciso ou na navalha mais clássica.</p>
+                <div class="sobre-features">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Profissionais certificados</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Produtos premium</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Ambiente climatizado</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Wi-Fi gratuito</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Estacionamento</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Atendimento VIP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── SERVIÇOS ───── -->
+    <section id="servicos">
+        <div class="section-header">
+            <span class="section-tag">✦ O que oferecemos</span>
+            <h2 class="section-title">NOSSOS SERVIÇOS</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <div class="servico-icon"><i class="fas fa-cut"></i></div>
+                <h3 class="servico-nome">Corte Masculino</h3>
+                <p class="servico-desc">Corte tradicional, degradê, navalhado ou social. Executado com precisão e
+                    acabamento perfeito.</p>
+                <div class="servico-preco">
+                    <span class="preco-from">A partir de</span>
+                    <span class="preco-valor">R$35</span>
+                </div>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon"><i class="fas fa-magic"></i></div>
+                <h3 class="servico-nome">Barba</h3>
+                <p class="servico-desc">Barba completa na navalha com toalha quente, óleos e balms importados para
+                    finalização premium.</p>
+                <div class="servico-preco">
+                    <span class="preco-from">A partir de</span>
+                    <span class="preco-valor">R$30</span>
+                </div>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon"><i class="fas fa-star"></i></div>
+                <h3 class="servico-nome">Combo Completo</h3>
+                <p class="servico-desc">Corte + barba com desconto especial. A combinação perfeita para sair totalmente
+                    renovado.</p>
+                <div class="servico-preco">
+                    <span class="preco-from">A partir de</span>
+                    <span class="preco-valor">R$60</span>
+                </div>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon"><i class="fas fa-tint"></i></div>
+                <h3 class="servico-nome">Coloração</h3>
+                <p class="servico-desc">Coloração capilar, mechas, luzes e camuflagem de fios brancos com produtos de
+                    alta qualidade.</p>
+                <div class="servico-preco">
+                    <span class="preco-from">A partir de</span>
+                    <span class="preco-valor">R$45</span>
+                </div>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon"><i class="fas fa-spa"></i></div>
+                <h3 class="servico-nome">Tratamentos</h3>
+                <p class="servico-desc">Hidratação capilar, botox, relaxamento e tratamentos especializados para cabelo
+                    e couro cabeludo.</p>
+                <div class="servico-preco">
+                    <span class="preco-from">A partir de</span>
+                    <span class="preco-valor">R$40</span>
+                </div>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon"><i class="fas fa-crown"></i></div>
+                <h3 class="servico-nome">VIP Experience</h3>
+                <p class="servico-desc">Experiência completa: corte + barba + sobrancelha + hidratação + drink de
+                    boas-vindas.</p>
+                <div class="servico-preco">
+                    <span class="preco-from">A partir de</span>
+                    <span class="preco-valor">R$120</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── TABELA DE PREÇOS ───── -->
+    <section id="precos">
+        <div class="section-header">
+            <span class="section-tag">✦ Tabela completa</span>
+            <h2 class="section-title">PREÇOS</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="precos-wrapper">
+
+            <div class="preco-categoria">
+                <h3><i class="fas fa-cut"></i> Cabelos</h3>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte Masculino Tradicional</h4>
+                        <p>Tesoura ou máquina com acabamento</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 35</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte Degradê / Fade</h4>
+                        <p>Low, mid ou high fade com transição perfeita</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 45</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte Máquina Zero</h4>
+                        <p>Raspado completo na máquina</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 25</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Acabamento / Retoque</h4>
+                        <p>Pescoço, orelhas e entradas</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 15</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte Infantil</h4>
+                        <p>Para crianças até 10 anos</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 30</div>
+                </div>
+            </div>
+
+            <div class="preco-categoria">
+                <h3><i class="fas fa-magic"></i> Barba</h3>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Barba Completa na Navalha</h4>
+                        <p>Com toalha quente, óleos e balm finalizador</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 35</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Desenho de Barba</h4>
+                        <p>Alinhamento e design do contorno</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 30</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Barba na Máquina</h4>
+                        <p>Aparagem e alinhamento com máquina</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 25</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Bigode</h4>
+                        <p>Aparagem e modelagem do bigode</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 15</div>
+                </div>
+            </div>
+
+            <div class="preco-categoria">
+                <h3><i class="fas fa-star"></i> Combos</h3>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte + Barba</h4>
+                        <p>O clássico da barbearia</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 60</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte + Sobrancelha</h4>
+                        <p>Visual completo no rosto</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 45</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Corte + Barba + Sobrancelha</h4>
+                        <p>Pacote completo de visual</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 70</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>VIP Experience</h4>
+                        <p>Corte + Barba + Sobrancelha + Hidratação</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 120</div>
+                </div>
+            </div>
+
+            <div class="preco-categoria">
+                <h3><i class="fas fa-spa"></i> Tratamentos & Extras</h3>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Sobrancelha na Navalha</h4>
+                        <p>Design e alinhamento preciso</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 15</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Hidratação Capilar</h4>
+                        <p>Máscara nutritiva com vapor</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 40</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Camuflagem de Fios Brancos</h4>
+                        <p>Coloração seletiva para fios grisalhos</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 55</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Relaxamento Capilar</h4>
+                        <p>Para cabelos crespos e encaracolados</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 80</div>
+                </div>
+                <div class="preco-item">
+                    <div class="preco-item-info">
+                        <h4>Pigmentação de Barba</h4>
+                        <p>Para barba rala ou com falhas</p>
+                    </div>
+                    <div class="preco-item-valor">R$ 60</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ───── GALERIA ───── -->
+    <!-- <section id="galeria">
+        <div class="section-header">
+            <span class="section-tag">✦ Nosso trabalho</span>
+            <h2 class="section-title">GALERIA</h2>
+            <div class="section-line"></div>
+        </div> -->
+    <!--
+      GALERIA: Troque os backgrounds no CSS (.g1, .g2...) pelas fotos reais dos cortes.
+      Ou substitua cada div por: <img src="foto.jpg" class="galeria-img" alt="Corte" />
+    -->
+    <!-- <div class="galeria-grid">
+            <div class="galeria-item">
+                <div class="galeria-img g1" style="height:100%;"></div>
+            </div>
+            <div class="galeria-item">
+                <div class="galeria-img g2" style="height:100%;"></div>
+            </div>
+            <div class="galeria-item">
+                <div class="galeria-img g3" style="height:100%;"></div>
+            </div>
+            <div class="galeria-item">
+                <div class="galeria-img g4" style="height:100%;"></div>
+            </div>
+            <div class="galeria-item">
+                <div class="galeria-img g5" style="height:100%;"></div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="galeria">
+        <h2>Modelos de Corte</h2>
+
+        <div class="galeria-grid">
+            <!-- Card 1 -->
+            <div class="galeria-card">
+                <img src="./assets/cort1.jpg" alt="Corte-1">
+            </div>
+
+            <!-- Card 2 -->
+            <div class="galeria-card">
+                <img src="./assets/cort2.jpg" alt="Corte-2">
+            </div>
+
+            <!-- Card 3 -->
+            <div class="galeria-card">
+                <img src="./assets/cort3.jpg" alt="Corte-3">
+            </div>
+
+            <!-- Card 4 -->
+            <div class="galeria-card">
+                <img src="./assets/cort4.jpg" alt="Corte-4">
+            </div>
+
+            <!-- Card 5 -->
+            <div class="galeria-card">
+                <img src="./assets/cort5.jpg" alt="Corte-5">
+            </div>
+
+            <!-- Card 6 -->
+            <div class="galeria-card">
+                <img src="./assets/cort6.jpg" alt="Corte-6">
+            </div>
+
+            <!-- Card 7 -->
+            <div class="galeria-card">
+                <img src="./assets/cort7.jpg" alt="Corte-7">
+            </div>
+
+            <!-- Card 8 -->
+            <div class="galeria-card">
+                <img src="./assets/cort8.jpg" alt="Corte 8">
+            </div>
+
+            <!-- Card 9 -->
+            <div class="galeria-card">
+                <img src="./assets/cort9.jpg" alt="Corte 9">
+            </div>
+
+            <!-- Card 10 -->
+            <div class="galeria-card">
+                <img src="./assets/cort10.jpg" alt="Corte 10">
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── AGENDAMENTO ───── -->
+    <section id="agendamento">
+        <div class="section-header">
+            <span class="section-tag">✦ Reserve seu horário</span>
+            <h2 class="section-title">AGENDAMENTO</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="agendamento-wrapper">
+            <div class="agendamento-grid">
+                <div class="agendamento-info">
+                    <h3>Horários de<br><span>Funcionamento</span></h3>
+                    <p>Agende pelo formulário ao lado ou diretamente pelo WhatsApp. Também atendemos por ordem de
+                        chegada, sujeito à disponibilidade.</p>
+                    <div class="horarios-grid">
+                        <div class="horario-item">
+                            <div class="horario-dia">Segunda a Sexta</div>
+                            <div class="horario-hora">09h às 20h</div>
+                        </div>
+                        <div class="horario-item">
+                            <div class="horario-dia">Sábado</div>
+                            <div class="horario-hora">08h às 18h</div>
+                        </div>
+                        <div class="horario-item">
+                            <div class="horario-dia">Domingo</div>
+                            <div class="horario-hora">09h às 14h</div>
+                        </div>
+                        <div class="horario-item">
+                            <div class="horario-dia">Feriados</div>
+                            <div class="horario-hora">09h às 13h</div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá, gostaria de agendar um horário!" target="_blank"
+                        class="btn-primary">
+                        <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                    </a>
+                </div>
+
+                <div class="form-agendamento">
+                    <h3>Agende Online</h3>
+                    <form id="formAgendamento">
+                        <div class="form-group">
+                            <label>Nome completo</label>
+                            <input type="text" id="nomeCliente" placeholder="Seu nome" required />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Telefone / WhatsApp</label>
+                                <input type="tel" id="telefoneCliente" placeholder="(XX) XXXXX-XXXX" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Data desejada</label>
+                                <input type="date" id="dataAgendamento" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Horário</label>
+                                <select id="horarioAgendamento" required>
+                                    <option value="">Selecione</option>
+                                    <option>09:00</option>
+                                    <option>09:30</option>
+                                    <option>10:00</option>
+                                    <option>10:30</option>
+                                    <option>11:00</option>
+                                    <option>11:30</option>
+                                    <option>13:00</option>
+                                    <option>13:30</option>
+                                    <option>14:00</option>
+                                    <option>14:30</option>
+                                    <option>15:00</option>
+                                    <option>15:30</option>
+                                    <option>16:00</option>
+                                    <option>16:30</option>
+                                    <option>17:00</option>
+                                    <option>17:30</option>
+                                    <option>18:00</option>
+                                    <option>18:30</option>
+                                    <option>19:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Barbeiro</label>
+                                <select id="barbeiroAgendamento">
+                                    <option value="">Sem preferência</option>
+                                    <option>João Silva</option>
+                                    <option>Pedro Alves</option>
+                                    <option>Carlos Mendes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Serviço desejado</label>
+                            <select id="servicoAgendamento" required>
+                                <option value="">Selecione o serviço</option>
+                                <option>Corte Masculino – R$35</option>
+                                <option>Corte Degradê/Fade – R$45</option>
+                                <option>Barba Completa – R$35</option>
+                                <option>Combo Corte + Barba – R$60</option>
+                                <option>Combo Corte + Barba + Sobrancelha – R$70</option>
+                                <option>VIP Experience – R$120</option>
+                                <option>Hidratação Capilar – R$40</option>
+                                <option>Outro (informar no campo abaixo)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Observações (opcional)</label>
+                            <textarea id="obsAgendamento" rows="3"
+                                placeholder="Ex: referência de corte, preferências..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-agendar">
+                            <i class="far fa-calendar-check"></i> Confirmar Agendamento
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── FORMAS DE PAGAMENTO ───── -->
+    <section id="pagamento">
+        <div class="section-header">
+            <span class="section-tag">✦ Facilidade para você</span>
+            <h2 class="section-title">FORMAS DE PAGAMENTO</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="pagamento-grid">
+            <div class="pagamento-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <h4>Dinheiro</h4>
+                <p>Pagamento em espécie com troco disponível</p>
+            </div>
+            <div class="pagamento-card">
+                <i class="fas fa-credit-card"></i>
+                <h4>Cartão de Débito</h4>
+                <p>Visa, Mastercard, Elo e demais bandeiras</p>
+            </div>
+            <div class="pagamento-card">
+                <i class="far fa-credit-card"></i>
+                <h4>Cartão de Crédito</h4>
+                <p>À vista ou parcelado em até 3x sem juros</p>
+            </div>
+            <div class="pagamento-card">
+                <i class="fas fa-qrcode"></i>
+                <h4>PIX</h4>
+                <p>Transferência instantânea com chave PIX</p>
+            </div>
+            <div class="pagamento-card">
+                <i class="fas fa-gift"></i>
+                <h4>Vale Presente</h4>
+                <p>Gift cards disponíveis para presentes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── DEPOIMENTOS ───── -->
+    <section id="depoimentos">
+        <div class="section-header">
+            <span class="section-tag">✦ O que dizem nossos clientes</span>
+            <h2 class="section-title">DEPOIMENTOS</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="depoimentos-grid">
+            <div class="depoimento-card">
+                <div class="depoimento-stars">★★★★★</div>
+                <p class="depoimento-text">Melhor barbearia da cidade, sem dúvida. O João tem uma habilidade incrível
+                    com o degradê. Já indiquei pra todos os meus amigos.</p>
+                <div class="depoimento-autor">
+                    <div class="autor-avatar">R</div>
+                    <div class="autor-info">
+                        <strong>Rafael Souza</strong>
+                        <span>Cliente há 3 anos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="depoimento-card">
+                <div class="depoimento-stars">★★★★★</div>
+                <p class="depoimento-text">Ambiente incrível, atendimento nota 10 e o resultado sempre supera as
+                    expectativas. O combo barba + corte é perfeito.</p>
+                <div class="depoimento-autor">
+                    <div class="autor-avatar">M</div>
+                    <div class="autor-info">
+                        <strong>Marcos Lima</strong>
+                        <span>Cliente há 2 anos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="depoimento-card">
+                <div class="depoimento-stars">★★★★★</div>
+                <p class="depoimento-text">Finalmente encontrei um lugar onde realmente entendem o que eu quero. A
+                    precisão no degradê é impressionante. Vale cada centavo.</p>
+                <div class="depoimento-autor">
+                    <div class="autor-avatar">G</div>
+                    <div class="autor-info">
+                        <strong>Gabriel Costa</strong>
+                        <span>Cliente há 1 ano</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── CONTATO ───── -->
+    <section id="contato">
+        <div class="section-header">
+            <span class="section-tag">✦ Onde estamos</span>
+            <h2 class="section-title">CONTATO</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contato-grid">
+            <div class="contato-info">
+                <h3>FALE COM A <span>KINGS CUT</span></h3>
+                <div class="contato-items">
+                    <div class="contato-item">
+                        <div class="contato-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contato-item-text">
+                            <strong>Endereço</strong>
+                            <p>Rua Exemplo, 123 – Bairro Centro<br>Cidade – UF, CEP 00000-000</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-item-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contato-item-text">
+                            <strong>Telefone / WhatsApp</strong>
+                            <p><a href="https://wa.me/5511999999999">(11) 99999-9999</a></p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-item-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contato-item-text">
+                            <strong>E-mail</strong>
+                            <p><a href="mailto:contato@kingscut.com.br">contato@kingscut.com.br</a></p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-item-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contato-item-text">
+                            <strong>Horário de Funcionamento</strong>
+                            <p>Seg–Sex: 09h às 20h<br>Sáb: 08h às 18h | Dom: 09h às 14h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="redes-sociais">
+                    <a href="#" class="rede-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="rede-btn"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="rede-btn"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="rede-btn"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!--
+        MAPA: Cole aqui o iframe do Google Maps da barbearia.
+        Acesse maps.google.com > pesquise o endereço > Compartilhar > Incorporar mapa > copie o iframe.
+        Substitua a div abaixo pelo iframe.
+      -->
+            <div class="mapa-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Cole aqui o iframe do Google Maps<br>com o endereço da barbearia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── FOOTER ───── -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <div class="footer-logo">Kings Cut</div>
+                <p class="footer-desc">Tradição, técnica e estilo desde 2016. Seu visual merece o melhor cuidado.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#precos">Preços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#agendamento">Agendar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#precos">Corte Masculino</a></li>
+                    <li><a href="#precos">Barba</a></li>
+                    <li><a href="#precos">Combos</a></li>
+                    <li><a href="#precos">Tratamentos</a></li>
+                    <li><a href="#precos">VIP Experience</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 <span>Kings Cut Barbearia</span>. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <span>♥</span> para o melhor visual da cidade.</p>
+        </div>
+    </footer>
+
+    <!-- ───── WHATSAPP FLUTUANTE ───── -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" title="Fale pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ───── LIGHTBOX ───── -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
