@@ -1,24 +1,3 @@
-/* ─────────────────────────────────────
-   KINGS CUT BARBEARIA — style.css
-   Organização:
-   1. Variáveis e Reset
-   2. Navbar
-   3. Hero
-   4. Seções (header padrão)
-   5. Sobre
-   6. Serviços
-   7. Tabela de Preços
-   8. Galeria
-   9. Agendamento
-   10. Pagamento
-   11. Depoimentos
-   12. Contato
-   13. Footer
-   14. WhatsApp Flutuante
-   15. Responsivo
-───────────────────────────────────── */
-
-/* ── 1. VARIÁVEIS E RESET ── */
 :root {
     --gold: #D4AF37;
     --dark: #0a0a0a;
@@ -529,56 +508,49 @@ section {
     background: var(--dark);
 }
 
+#galeria h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+/* Grid que contém os cards */
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 280px);
-    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 por linha no desktop */
+    gap: 12px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.galeria-item {
+/* Cada card */
+.galeria-card {
+    background: #1a1a1a;
+    border-radius: 8px;
     overflow: hidden;
-    border-radius: 3px;
-    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform .2s ease, box-shadow .2s ease;
+    height: 200px;
+    /* ESSENCIAL pra imagem ter altura */
 }
 
-.galeria-item:first-child {
-    grid-row: span 2;
-}
-
-.galeria-img {
+/* Imagem dentro do card */
+.galeria-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    object-position: top;
+    display: block;
 }
 
-.galeria-item:hover .galeria-img {
-    transform: scale(1.05);
+/* Hover – dá destaque */
+.galeria-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Substitua estas URLs pelas fotos reais dos cortes */
-.g1 {
-    background: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80') center/cover;
-}
-
-.g2 {
-    background: url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80') center/cover;
-}
-
-.g3 {
-    background: url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80') center/cover;
-}
-
-.g4 {
-    background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80') center/cover;
-}
-
-.g5 {
-    background: url('https://images.unsplash.com/photo-1621605815971-3e9f0a23e5eb?w=800&q=80') center/cover;
-}
 
 /* ── 9. AGENDAMENTO ── */
 #agendamento {
@@ -646,7 +618,7 @@ section {
 .form-agendamento {
     background: var(--gray);
     padding: 40px;
-    border-radius: 4px;
+    border-radius: 44px;
     border-top: 3px solid var(--gold);
 }
 
@@ -728,6 +700,82 @@ section {
     background: #b8962e;
     transform: translateY(-2px);
 }
+
+/* Estilos para os cards de barbeiros */
+.barbeiros-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.barbeiros-title span {
+    color: var(--gold);
+}
+
+.barbeiros-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.barbeiro-card {
+    background: var(--gray);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.barbeiro-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.barbeiro-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--gold);
+}
+
+.barbeiro-card h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.barbeiro-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    min-height: 36px;
+    /* Garante altura mínima para descrição */
+}
+
+.barbeiro-card .btn-secondary {
+    padding: 8px 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.barbeiro-card .btn-secondary.selected {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+}
+
 
 /* ── 10. PAGAMENTO ── */
 #pagamento {
@@ -849,6 +897,142 @@ section {
     font-size: 12px;
     color: var(--text-muted);
 }
+
+/* Estilos para os botões de depoimento */
+.depoimentos-actions {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para o Modal */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1001;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--gray);
+    margin: auto;
+    padding: 30px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal-content .form-group {
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea,
+.modal-content select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal-content select {
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23D4AF37%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.6-6.4H18.9c-5%200-9.3%201.8-12.9%205.4-3.6%203.6-5.4%207.8-5.4%2012.9%200%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.9%205.4s9.3-1.8%2012.9-5.4l128-127.9c3.6-3.6%205.4-7.8%205.4-12.9%200-5-1.8-9.3-5.4-12.9z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+.modal-content .btn-primary {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--text-muted);
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+#listaTodosDepoimentos .depoimento-card {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+#listaTodosDepoimentos .depoimento-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 
 /* ── 12. CONTATO ── */
 #contato {
@@ -1054,12 +1238,6 @@ footer {
 /* ── 14. WHATSAPP FLUTUANTE ── */
 .whatsapp-float {
     position: fixed;
-    bottom:
-}
-
-/* ── 14. WHATSAPP FLUTUANTE ── */
-.whatsapp-float {
-    position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 999;
@@ -1122,6 +1300,19 @@ footer {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Estado inicial dos elementos antes de entrar na tela */
 .fade-in {
     opacity: 0;
@@ -1134,60 +1325,6 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-
-#galeria h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: var(--gold);
-}
-
-/* Grid que contém os cards */
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    /* 5 por linha no desktop */
-    gap: 12px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Cada card */
-.galeria-card {
-    background: #1a1a1a;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    transition: transform .2s ease, box-shadow .2s ease;
-    height: 200px;
-    /* ESSENCIAL pra imagem ter altura */
-}
-
-/* Imagem dentro do card */
-.galeria-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-}
-
-/* Hover – dá destaque */
-.galeria-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-
-/* Celulares pequenos */
-@media (max-width: 480px) {
-    .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ── LIGHTBOX ── */
-
 
 /* ── LIGHTBOX ── */
 .lightbox {
@@ -1219,6 +1356,189 @@ footer {
     font-size: 48px;
     color: var(--gold);
     cursor: pointer;
+}
+
+/* ── CHATBOT ── */
+.chatbot-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 998;
+    width: 60px;
+    height: 60px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--dark);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s;
+}
+
+.chatbot-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.6);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    /* Acima do botão de toggle */
+    left: 30px;
+    z-index: 997;
+    width: 350px;
+    height: 450px;
+    background: var(--gray);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+}
+
+.chatbot-container.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.chatbot-header {
+    background: var(--darker);
+    color: var(--gold);
+    padding: 15px 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.chatbot-header i {
+    margin-right: 10px;
+}
+
+.chatbot-close-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.chatbot-close-btn:hover {
+    color: var(--white);
+}
+
+.chatbot-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chatbot-message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background: var(--light-gray);
+    color: var(--white);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.user-message {
+    background: var(--gold);
+    color: var(--dark);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chatbot-warnings {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.chatbot-warnings strong {
+    color: var(--gold);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chatbot-warnings ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.chatbot-warnings li {
+    margin-bottom: 3px;
+}
+
+.chatbot-warnings a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.chatbot-footer {
+    display: flex;
+    padding: 10px 15px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    background: var(--darker);
+}
+
+.chatbot-footer input {
+    flex-grow: 1;
+    background: var(--dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.chatbot-footer input:focus {
+    border-color: var(--gold);
+}
+
+.chatbot-footer button {
+    background: var(--gold);
+    border: none;
+    border-radius: 5px;
+    color: var(--dark);
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chatbot-footer button:hover {
+    background: #b8962e;
 }
 
 
@@ -1258,8 +1578,12 @@ footer {
         grid-row: span 1;
     }
 
-    .galeria-item {
+    .galeria-card {
         height: 250px;
+    }
+
+    .barbeiros-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
@@ -1357,7 +1681,7 @@ footer {
         grid-template-rows: auto;
     }
 
-    .galeria-item {
+    .galeria-card {
         height: 200px;
     }
 
@@ -1379,8 +1703,16 @@ footer {
         padding-right: 25px !important;
     }
 
-    .galeria-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .depoimentos-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .chatbot-container {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        bottom: 90px;
     }
 }
 
@@ -1412,7 +1744,7 @@ footer {
         grid-template-rows: auto;
     }
 
-    .galeria-item {
+    .galeria-card {
         height: 220px;
     }
 
@@ -1452,7 +1784,24 @@ footer {
         right: 20px;
     }
 
-    .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .chatbot-toggle-btn {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .chatbot-container {
+        width: calc(100% - 40px);
+        /* Ajusta para 20px de margem em cada lado */
+        left: 20px;
+        bottom: 80px;
+        /* Acima do botão de toggle */
+        height: 400px;
+    }
+
+    .barbeiros-cards {
+        grid-template-columns: 1fr;
     }
 }
